@@ -1,0 +1,58 @@
+#swipers {
+  overflow: visible;
+}
+
+.movie-holder {
+  height: 120px;
+  width: 100%;
+  z-index: 2;
+
+  &:hover {
+    transition-duration: 1s;
+    position: absolute;
+    overflow: visible;
+    transform: translateY(-60%);
+    z-index: 3;
+  }
+}
+
+.movie-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+
+  .movie-content {
+    display: none;
+  }
+
+  &:hover {
+    width: 150%;
+    .movie-content {
+      position: absolute;
+      display: block;
+      overflow: visible;
+      color: white;
+      width: 100%;
+      padding: 0.5rem;
+      background-color: rgb(59, 57, 57);
+      opacity: 1;
+
+      button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        margin-right: 5px;
+
+        &:hover {
+          border: 2px solid white;
+        }
+      }
+    }
+  }
+
+  img {
+    border-radius: 0.3rem 0.3rem 0 0;
+  }
+}

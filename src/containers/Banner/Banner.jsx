@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { apiInstance } from "../../api/apiInstance";
 import { Button } from "../../components/Button/Button";
 
-import "./Banner.css";
+import "./Banner.scss";
 
 export const Banner = () => {
   const [trending, setTrending] = useState({});
@@ -20,17 +20,17 @@ export const Banner = () => {
     fetchTrending();
   }, []);
   return (
-    <div className="w-auto h-96 relative">
+    <div className="w-auto relative">
       <img
-        className="w-full h-96 "
+        className="w-full banner-image"
         src={`http://image.tmdb.org/t/p/w500/${trending.backdrop_path}`}
         alt={trending.title}
       />
       <div className="absolute bottom-24 left-20">
         <span className="banner-title">{trending.title || trending.name}</span>
         <div className="flex">
-          <Button name="Play" icon="play" backgroundColor="white" textColor="black" />
-          <Button name="More Info" icon="info" backgroundColor="gray-400" textColor="white"/>
+          <Button type="play" />
+          <Button type="info" />
         </div>
       </div>
     </div>

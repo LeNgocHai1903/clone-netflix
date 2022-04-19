@@ -12,9 +12,8 @@ export const MovieCarousel = () => {
         `/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       );
       setMovies(responseData.data.results);
-      console.log(responseData.data.results)
     };
     fetchMovie();
   }, []);
-  return <Carousel name="Movie" movies={movies} />;
+  return <Carousel name="Movie" movies={movies} type="movie" />;
 };

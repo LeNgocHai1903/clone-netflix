@@ -1,5 +1,4 @@
 import { NavBar } from "./containers/NavBar/NavBar";
-import { Banner } from "./containers/Banner/Banner";
 import { LandingPage } from "./pages/LandingPage";
 import { Footer } from "./containers/Footer/Footer";
 
@@ -9,7 +8,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Banner />
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />

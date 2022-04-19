@@ -15,5 +15,5 @@ export const TVCarousel = () => {
     };
     fetchMovie();
   }, []);
-  return <Carousel name="TV Shows" movies={movies} />;
+  return <Carousel name="TV Shows" movies={movies} type="tv" />;
 };
